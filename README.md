@@ -58,5 +58,5 @@ docker run --memory=128m --restart="always" -t smartb/<image name>:<tag>
 #### Cleanup
 This step is important to keep from paying for unused/stopped containers:
 ```
-docker rm $(docker ps -q -f status=exited)
+docker rm $(docker ps -q -f status=exited -f status=created)
 ```
