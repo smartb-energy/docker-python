@@ -54,3 +54,9 @@ Deploy your container using the appropriate image from the Docker Hub's smartB r
 docker login
 docker run --memory=128m --restart="always" -t smartb/<image name>:<tag>
 ```
+
+#### Cleanup
+This step is important to keep from paying for unused/stopped containers:
+```
+docker rm $(docker ps -q -f status=exited)
+```
