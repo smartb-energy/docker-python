@@ -1,4 +1,5 @@
 .git/
+.bundle/
 .DS_Store
 .AppleDouble
 .LSOverride
