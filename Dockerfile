@@ -1,6 +1,7 @@
 FROM ubuntu:14.04
-#FROM phusion/baseimage  # use phusion/baseimage if you need service management
-                         # and other full-OS-like features
+# use phusion/baseimage if you need service management, etc.
+#FROM phusion/baseimage
+
 MAINTAINER 'smartB Engineering'
 
 # basic setup for ubuntu
