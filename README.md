@@ -18,9 +18,6 @@ bundle exec rspec spec/*
 ```
 
 #### Build
-DANGER! DANGER! DANGER!
-
-*Before* you build, check the [smartB Docker registry](https://hub.docker.com/u/smartb/dashboard) to see what the latest tag for this image is. If you assign an already-existing tag to your new Docker image and then do a `docker push` you *will* overwrite the version in the Docker registry.  This action is destructive and can't be undone.
 ```
 docker build -t smartb/<image name>:<tag> .
 ```
@@ -33,6 +30,8 @@ ls /some/directory
 ```
 
 #### Push
+DANGER! DANGER! DANGER!
+*Before* you push, check the [smartB Docker registry](https://hub.docker.com/u/smartb/dashboard) to make sure you aren't about to overwrite an existing tag for this image. If you've assigned an existing tag to your new Docker image and then do a `docker push` you *will* overwrite the exiting image in the Docker registry.  This action is *destructive* and can't be undone.
 ```
 docker login
 docker push smartb/<image name>:<tag>
