@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # basic setup for ubuntu
 dpkg-divert --local --rename --add /sbin/initctl
 ln -sf /bin/true /sbin/initctl

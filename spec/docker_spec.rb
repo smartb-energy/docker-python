@@ -7,7 +7,11 @@ set :backend, :exec
 
 describe "Dockerfile" do
   before(:all) do
-    image = Docker::Image.build_from_dir('.')
+    image = Docker::Image.build_from_dir('.') do |v|
+      if (log = JSON.parse(v)) && log.has_key?("stream")
+        $stdout.puts log["stream"]
+      end
+    end
 
     set :os, family: :debian
     set :backend, :docker
@@ -16,6 +20,10 @@ describe "Dockerfile" do
 
   describe file('/etc/passwd') do
     it { should be_file }
+  end
+
+  describe file ('/home/root/prepare_ubuntu_image.sh') do
+    its(:content) { should match /set -e/ }
   end
 
 ###################################
