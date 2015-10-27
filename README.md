@@ -1,6 +1,9 @@
 #### Conventions
 ##### Files For Your Docker Image
-Store files used by the `ADD` or `COPY` directives in your `Dockerfile` in `./files`.  This directory should be treated as the top-level overlay for the Docker image's filesystem (so if you want a file called `foo.conf` in `/etc` in your Docker image, create it in `./files/etc/foo.conf` and then `COPY files/etc/foo.conf /etc/foo.conf` in your `Dockerfile`).
+Store files used by the `ADD` or `COPY` directives in your `Dockerfile` in `files` directory of this repository.  The `files` directory functions as the relative root of your container's filesystem.  An example `Dockerfile` configuration would look like this:
+```
+COPY files/etc/foo.conf /etc/foo.conf
+```
 
 #### Setup
 ```
