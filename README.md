@@ -14,7 +14,7 @@ bundle
 
 #### Automated Tests
 ```
-bundle exec rspec spec/*
+bundle exec rspec
 ```
 
 #### Build

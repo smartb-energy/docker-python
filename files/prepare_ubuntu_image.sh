@@ -2,9 +2,6 @@
 
 set -e
 
-# basic setup for ubuntu
-dpkg-divert --local --rename --add /sbin/initctl
-ln -sf /bin/true /sbin/initctl
 apt-get update
 
 ####################################################

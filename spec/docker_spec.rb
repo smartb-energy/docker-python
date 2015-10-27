@@ -30,6 +30,6 @@ describe "Dockerfile" do
 #### Add serverspec tests here ####
 #### for more inforamtion, see ####
 #### http://serverspec.org     ####
-###################################
+###################################    
 
 end
