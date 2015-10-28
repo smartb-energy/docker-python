@@ -12,8 +12,6 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
     net-telnet (0.1.1)
-    respec (0.9.0)
-      rspec (>= 2.11)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
@@ -47,8 +45,7 @@ PLATFORMS
 
 DEPENDENCIES
   docker-api
-  respec
   serverspec
 
 BUNDLED WITH
-   1.10.3
+   1.10.6
