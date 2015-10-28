@@ -8,5 +8,6 @@ services:
 before_install:
 - bundle
 
+# rspec/serverspec
 script:
 - rspec spec/*
