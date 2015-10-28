@@ -18,10 +18,6 @@ describe "Dockerfile" do
     set :docker_image, image.id
   end
 
-  describe file('/etc/passwd') do
-    it { should be_file }
-  end
-
   describe file ('/home/root/prepare_ubuntu_image.sh') do
     its(:content) { should match /set -e/ }
     its(:content) { should match /apt-get update/ }
