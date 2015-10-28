@@ -24,12 +24,14 @@ describe "Dockerfile" do
 
   describe file ('/home/root/prepare_ubuntu_image.sh') do
     its(:content) { should match /set -e/ }
+    its(:content) { should match /apt-get update/ }
+    its(:content) { should match /apt-get clean && rm -rf \/var\/lib\/apt\/lists/ }
   end
 
 ###################################
 #### Add serverspec tests here ####
 #### for more inforamtion, see ####
 #### http://serverspec.org     ####
-###################################    
+###################################
 
 end
