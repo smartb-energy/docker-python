@@ -6,7 +6,7 @@ Store files used by the `ADD` or `COPY` directives in your `Dockerfile` in `file
 COPY files/etc/foo.conf /etc/foo.conf
 ```
 
-#### Setup
+#### Setup (OS X)
 ```
 docker-machine start default &
 sudo gem install bundler
