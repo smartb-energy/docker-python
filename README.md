@@ -7,6 +7,7 @@ COPY files/etc/foo.conf /etc/foo.conf
 ```
 
 #### Setup (OS X)
+Get Docker [here](https://docs.docker.com/installation/mac/)
 ```
 docker-machine start default &
 sudo gem install bundler
