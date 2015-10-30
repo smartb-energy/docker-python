@@ -20,6 +20,7 @@ bundle exec rspec
 ```
 
 #### Build
+Please use [semantic versioning](http://semver.org)
 ```
 docker build -t smartb/<image name>:<tag> .
 ```
