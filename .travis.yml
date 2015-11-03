@@ -10,4 +10,4 @@ before_install:
 
 # rspec/serverspec
 script:
-- rspec spec/*
+- bundle exec rspec spec/*
