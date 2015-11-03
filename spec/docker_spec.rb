@@ -1,6 +1,6 @@
 # Note: although we require 'docker' here, the gem that satisfies this requirement
 # is the 'docker-api' gem (see this project's Gemfile)
-require 'docker'
+require 'docker'      # see https://rubygems.org/gems/docker-api
 require 'serverspec'  # see http://serverspec.org
 
 set :backend, :exec
