@@ -11,6 +11,7 @@ Get Docker [here](https://www.docker.com/docker-toolbox)
 ```
 docker-machine create -d virtualbox default
 docker-machine start default
+eval $(docker-machine env default)  # this can be added to your .bash_profile, etc as well
 sudo gem install bundler
 bundle
 ```
