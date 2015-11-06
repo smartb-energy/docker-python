@@ -9,7 +9,8 @@ COPY files/etc/foo.conf /etc/foo.conf
 #### Setup (OS X)
 Get Docker [here](https://www.docker.com/docker-toolbox)
 ```
-docker-machine start default &
+docker-machine create -d virtualbox default
+docker-machine start default
 sudo gem install bundler
 bundle
 ```
