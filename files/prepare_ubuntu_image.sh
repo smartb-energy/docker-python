@@ -1,13 +1,20 @@
 #!/bin/bash
 
 set -e
-
 apt-get update
+apt-get upgrade -y gcc
 
-####################################################
-#### Customize your docker image here. For more ####
-#### inforation see https://docs.docker.com     ####
-####################################################
+#deps
 
-# disable package installs
-apt-get clean && rm -rf /var/lib/apt/lists
+
+
+apt-get -qq -y install curl
+#install and up pip
+apt-get install -y python-pip
+pip install -U pip
+apt-get update
+cd /home/root/
+pip install $(cat requirements.txt | grep numpy)
+pip install -r requirements.txt
+
+apt-get clean
