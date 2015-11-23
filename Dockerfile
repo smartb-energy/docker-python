@@ -15,3 +15,4 @@ RUN apt-get build-dep -y python-tables
 RUN apt-get install rsync
 COPY files/ /home/root/
 RUN /bin/bash /home/root/prepare_ubuntu_image.sh
+

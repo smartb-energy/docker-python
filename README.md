@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/smartb-energy/docker-template.svg?branch=master)](https://travis-ci.org/smartb-energy/docker-template)
+[![Build Status](https://travis-ci.org/smartb-energy/docker-python.svg?branch=master)](https://travis-ci.org/smartb-energy/docker-python)
 #### Conventions
 ##### Files For Your Docker Image
 Store files used by the `ADD` or `COPY` directives in your `Dockerfile` in `files` directory of this repository.  The `files` directory functions as the relative root of your container's filesystem.  An example `Dockerfile` configuration would look like this:
@@ -6,10 +6,12 @@ Store files used by the `ADD` or `COPY` directives in your `Dockerfile` in `file
 COPY files/etc/foo.conf /etc/foo.conf
 ```
 
-#### Setup (OS X)
-Get Docker [here](https://docs.docker.com/installation/mac/)
+
+Get Docker [here](https://www.docker.com/docker-toolbox)
 ```
-docker-machine start default &
+docker-machine create -d virtualbox default
+docker-machine start default
+eval $(docker-machine env default)  # this can be added to your .bash_profile, etc as well
 sudo gem install bundler
 bundle
 ```
