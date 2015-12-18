@@ -1,10 +1,4 @@
-# Note: although we require 'docker' here, the gem that satisfies this requirement
-# is the 'docker-api' gem (see this project's Gemfile)
-
-require 'docker'      # see https://rubygems.org/gems/docker-api
-require 'serverspec'  # see http://serverspec.org
-
-set :backend, :exec
+require 'spec_helper'
 
 describe "Dockerfile" do
   before(:all) do
@@ -18,10 +12,10 @@ describe "Dockerfile" do
     set :backend, :docker
     set :docker_image, image.id
   end
-
-  describe file ('/home/root/prepare_image.sh') do
-    its(:content) { should match /set -e/ }
-  end
+  #
+  # after(:all) do
+  #   image.remove(:force => true)
+  # end
 
   describe command('python -V') do
     its(:stderr) { should match /Python 2.7/}
